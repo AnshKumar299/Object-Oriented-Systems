@@ -1,0 +1,40 @@
+public class Complex {
+    int real,img;
+    Complex(){
+        real=0;
+        img=0;
+    }
+    Complex(int rl){
+        real=rl;
+        img=0;
+    }
+    Complex(int rl, int im){
+        real=rl;
+        img=im;
+    }
+
+    Complex add(Complex c1, Complex c2){
+        Complex ob= new Complex(c1.real+c2.real, c1.img+c2.img);
+        return ob;
+    }
+
+    Complex multiply(Complex c1, Complex c2){
+        Complex ob= new Complex(c1.real*c2.real-c1.img*c2.img, c1.img*c2.real+c1.real*c2.img);
+        return ob;
+    }
+
+    void print(){
+        System.out.println(real+"+"+img+"i");
+    }
+
+    public static void main(String[] args) {
+        Complex num1=new Complex(3,2);
+        Complex num2=new Complex(4, -2);
+        System.out.println("Sum : ");
+        new Complex().add(num1, num2).print();
+
+        System.out.println("Product: ");
+        new Complex().multiply(num1, num2).print();
+    }
+
+}
