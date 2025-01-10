@@ -1,4 +1,3 @@
-import java.util.Scanner;
 class Room {
     int height,width,breadth;
     Room(int a,int b, int c){
@@ -14,11 +13,9 @@ class Room {
 
 public class RoomDemo{
     public static void main(String[] args) {
-        Scanner in=new Scanner(System.in);
-        System.out.println("Enter height, breadth and width");
-        int h=in.nextInt();
-        int b=in.nextInt();
-        int w=in.nextInt();
+        int h=14;
+        int b=6;
+        int w=6;
         Room r=new Room(h,b,w);
         System.out.println("Volume of room is: "+r.volume());
     }
